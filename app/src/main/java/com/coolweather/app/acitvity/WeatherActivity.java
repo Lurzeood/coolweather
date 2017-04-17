@@ -107,7 +107,10 @@ public class WeatherActivity extends Activity implements View.OnClickListener {
             public void onFinish(final String response) {
                 if ("countyCode".equals(type)){
                     if (!TextUtils.isEmpty(response)){
+                      //  Log.d("res",response);
                         String[] array = response.split("\\|");
+                       // Log.d("res",array[0]);
+                      //  Log.d("res",array[1]);
                         if (array != null&&array.length==2){
                             String weatherCode  = array[1];
                             queryWeatherInfo(weatherCode);
